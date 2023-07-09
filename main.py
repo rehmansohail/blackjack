@@ -82,7 +82,7 @@ while 1:
                 fill(dealer_cards,cardlist)
                 dealer_score+=score
             cont=""
-            cont=input("Do you want to hit a card?\n").lower()
+            cont=input("Do you want to hit a card? 'yes' or 'no'\n").lower()
             while 1:
                 if cont=="no":
                     break
@@ -90,7 +90,10 @@ while 1:
                     score=0
                     fill(user_cards,cardlist)
                     user_score+=score
-                    if user_score>21:
+                    print("Your cards")
+                    print(user_cards)
+                    print(user_score)
+                    if user_score>=21:
                         break
                     else:
                         cont=input("Do you want to hit a card? 'yes' or 'no'\n").lower()
@@ -109,7 +112,16 @@ while 1:
                 print(dealer_cards)
                 print(dealer_score)
             else:
-                if user_score>dealer_score:
+                if dealer_score>21:
+                    print("You won")
+                    print("Your cards")
+                    print(user_cards)
+                    print(user_score)
+                    print("Dealer cards")
+                    print(dealer_cards)
+                    print(dealer_score)
+                    
+                elif user_score>dealer_score:
                     print("You won")
                     print("Your cards")
                     print(user_cards)
