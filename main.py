@@ -1,4 +1,5 @@
 import random
+import art
 
 
 cardlist=["A",2,3,4,5,6,7,8,9,10,"J","Q","K"]
@@ -21,8 +22,10 @@ score=0
  
  
  
+print(art.logo)
 flag=input("Do you want to play blackjack? 'yes' or 'no'\n").lower()
 while 1:
+    
     a=False
     user_score=0
     dealer_score=0
